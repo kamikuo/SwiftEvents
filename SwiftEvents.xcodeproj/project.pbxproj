@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		530786FB2520F191004ECF30 /* SwiftEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 530786F92520F191004ECF30 /* SwiftEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5309C4B525230E5100B22F8A /* EventActionsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5309C4B425230E5100B22F8A /* EventActionsContainer.swift */; };
+		5309C4B825230E6B00B22F8A /* EventsOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5309C4B725230E6B00B22F8A /* EventsOwner.swift */; };
+		5309C4BB25230E8400B22F8A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5309C4BA25230E8400B22F8A /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		530786F62520F191004ECF30 /* SwiftEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		530786F92520F191004ECF30 /* SwiftEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftEvents.h; sourceTree = "<group>"; };
 		530786FA2520F191004ECF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5309C4B425230E5100B22F8A /* EventActionsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventActionsContainer.swift; sourceTree = "<group>"; };
+		5309C4B725230E6B00B22F8A /* EventsOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsOwner.swift; sourceTree = "<group>"; };
+		5309C4BA25230E8400B22F8A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +52,21 @@
 		530786F82520F191004ECF30 /* SwiftEvents */ = {
 			isa = PBXGroup;
 			children = (
+				5309C4B325230E3A00B22F8A /* Sources */,
 				530786F92520F191004ECF30 /* SwiftEvents.h */,
 				530786FA2520F191004ECF30 /* Info.plist */,
 			);
 			path = SwiftEvents;
+			sourceTree = "<group>";
+		};
+		5309C4B325230E3A00B22F8A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5309C4B425230E5100B22F8A /* EventActionsContainer.swift */,
+				5309C4B725230E6B00B22F8A /* EventsOwner.swift */,
+				5309C4BA25230E8400B22F8A /* Event.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +112,7 @@
 				TargetAttributes = {
 					530786F52520F191004ECF30 = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -131,6 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5309C4B825230E6B00B22F8A /* EventsOwner.swift in Sources */,
+				5309C4BB25230E8400B22F8A /* Event.swift in Sources */,
+				5309C4B525230E5100B22F8A /* EventActionsContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -278,6 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kamikuo.SwiftEvents;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
